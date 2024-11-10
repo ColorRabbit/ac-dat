@@ -12,9 +12,9 @@ const (
 	RootState = 0
 	FailState = -1
 
-	MaskBegin  = 0xFF000000
-	MaskEnd    = 0x00FF0000
-	MaskLength = 0x00003FFF
+	//MaskBegin  = 0xFF000000
+	//MaskEnd    = 0x00FF0000
+	//MaskLength = 0x00003FFF
 )
 
 func HandleDict(dictPath string) *ACAutomaton {

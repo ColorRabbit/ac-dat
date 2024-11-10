@@ -7,9 +7,6 @@ import (
 	"unsafe"
 )
 
-//TIP To run your code, right-click the code and select <b>Run</b>. Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.
-
 const (
 	BufferSize = 256 * 1024
 )
@@ -24,8 +21,7 @@ var (
 )
 
 func main() {
-	//ac := dict.HandleDict("./demo_dict.txt")
-	ac := dict.HandleDict("./ttt.txt")
+	ac := dict.HandleDict("./demo_dict.txt")
 	Base = ac.Base
 	Check = ac.Check
 	Fail = ac.Failure
@@ -81,11 +77,25 @@ func HandleFileLine(input []byte) (output []byte) {
 	reMatch:
 		if t := state + int(c) + dict.RootState; t > 0 {
 			if t > checkLength {
-				state = 1
+				if state > len(Fail) {
+					state = 1
+					goto reMatch
+				}
+				state = Fail[state]
+				if state <= 0 {
+					state = 1
+				}
 				goto reMatch
 			}
 			if state > 1 && state != Check[t] {
-				state = 1
+				if state > len(Fail) {
+					state = 1
+					goto reMatch
+				}
+				state = Fail[state]
+				if state <= 0 {
+					state = 1
+				}
 				goto reMatch
 			}
 			if state == Check[t] {
@@ -134,5 +144,3 @@ func HandleFileLine(input []byte) (output []byte) {
 	}
 	return
 }
-
-//sss【she】hasalotof【hers】soineedyouwhyhi【she】artsobad
