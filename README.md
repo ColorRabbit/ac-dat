@@ -9,15 +9,15 @@ AC自动机（Aho-Corasick automaton）是一种高效的多模式匹配算法�
 
 
 ## 参考文献：
-https://www.hankcs.com/program/algorithm/implementation-and-analysis-of-aho-corasick-algorithm-in-java.html#google_vignette
-https://www.hankcs.com/program/java/triedoublearraytriejava.html#google_vignette
-https://www.hankcs.com/program/algorithm/aho-corasick-double-array-trie.html
-https://www.doc88.com/p-0601666272874.html
+- https://www.hankcs.com/program/algorithm/implementation-and-analysis-of-aho-corasick-algorithm-in-java.html#google_vignette
+- https://www.hankcs.com/program/java/triedoublearraytriejava.html#google_vignette
+- https://www.hankcs.com/program/algorithm/aho-corasick-double-array-trie.html
+- https://www.doc88.com/p-0601666272874.html
 
 ## 参考代码：
-https://github.com/hankcs/AhoCorasickDoubleArrayTrie
-https://github.com/hankcs/aho-corasick
-https://github.com/Vonng/ac
+- https://github.com/hankcs/AhoCorasickDoubleArrayTrie
+- https://github.com/hankcs/aho-corasick
+- https://github.com/Vonng/ac
 
 ## 项目初衷：
 - 个人学习
